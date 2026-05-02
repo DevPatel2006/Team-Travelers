@@ -1165,6 +1165,27 @@ input[type=range]:hover::-webkit-slider-thumb { box-shadow: 0 0 0 6px rgba(72,12
   background: var(--a); box-shadow: 0 0 8px var(--a);
 }
 
+.product-img-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 120px;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease, filter 0.4s ease;
+}
+
+/* Keep your existing animations + enhance them */
+.product-card:hover .product-image {
+  transform: scale(1.1) rotate(2deg);
+  filter: brightness(1.1) contrast(1.1);
+}
+
 /* ═══════════════════════════════════════════════════
    TOAST
 ═══════════════════════════════════════════════════ */
@@ -1339,6 +1360,7 @@ input[type=range]:hover::-webkit-slider-thumb { box-shadow: 0 0 0 6px rgba(72,12
       <div class="lbl">Product</div>
       <div class="product-card">
         <div class="product-img">
+            <img src="Bablo.jpeg" alt="Product Image" class="product-image">
           <div class="product-img-bg"></div>
           <div class="product-grid-lines"></div>
           <div class="product-scan"></div>
@@ -1364,9 +1386,9 @@ input[type=range]:hover::-webkit-slider-thumb { box-shadow: 0 0 0 6px rgba(72,12
         </div>
         <div class="product-body">
           <div class="product-title">Smart Bag — Traveler Pro X1</div>
-          <div class="product-desc">Autonomous luggage with embedded C logic, BLE follow-mode, GPS tracking and anti-theft protection.</div>
+          <div class="product-desc">Autonomous luggage with embedded C++ logic, BLE follow-mode, GPS tracking and anti-theft protection.</div>
           <div class="product-tags">
-            <span class="product-tag">Embedded C</span><span class="product-tag">BLE 5.0</span>
+            <span class="product-tag">Embedded C++</span><span class="product-tag">BLE 5.0</span>
             <span class="product-tag">GPS</span><span class="product-tag">ESP32</span>
           </div>
         </div>
@@ -1501,7 +1523,7 @@ input[type=range]:hover::-webkit-slider-thumb { box-shadow: 0 0 0 6px rgba(72,12
       <div class="about-hero">
         <div class="about-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Embedded Systems Project</div>
         <div class="about-title">Traveler Pro X1<br>Smart Bag</div>
-        <div class="about-desc">An autonomous luggage system driven by embedded C logic. Uses RSSI-based signal tracking, IMU sensors, and GPS to follow its owner — hands-free.</div>
+        <div class="about-desc">An autonomous luggage system driven by embedded C++ logic. Uses RSSI-based signal tracking, IMU sensors, and GPS to follow its owner — hands-free.</div>
       </div>
       <div class="lbl">Core Features</div>
       <div class="card">
